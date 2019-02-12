@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/home_screen.dart';
+
 class RestoreAccountScreen extends StatefulWidget {
   @override
   _RestoreAccountScreenState createState() => _RestoreAccountScreenState();
@@ -12,6 +14,7 @@ class _RestoreAccountScreenState extends State<RestoreAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -57,8 +60,7 @@ class _RestoreAccountScreenState extends State<RestoreAccountScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => RestoreAccountScreen()),
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   },
                   child: Row(
