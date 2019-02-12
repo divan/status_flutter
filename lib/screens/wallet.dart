@@ -9,73 +9,76 @@ class WalletPage extends StatefulWidget {
 class _WalletPageState extends State<WalletPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          width: double.infinity,
-          color: Color(0xFF4260DC),
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 25.0),
-                child: RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      fontSize: 48.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white30,
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            color: Color(0xFF4260DC),
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 25.0),
+                  child: RichText(
+                    text: TextSpan(
+                      style: TextStyle(
+                        fontSize: 48.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white30,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(text: '~'),
+                        TextSpan(
+                            text: '14.44',
+                            style: TextStyle(color: Colors.white)),
+                        TextSpan(text: ''' USD'''),
+                      ],
                     ),
-                    children: <TextSpan>[
-                      TextSpan(text: '~'),
-                      TextSpan(
-                          text: '14.44', style: TextStyle(color: Colors.white)),
-                      TextSpan(text: ''' USD'''),
-                    ],
                   ),
                 ),
-              ),
-              _buildMenuItem(
-                  'Send',
-                  Transform.rotate(
-                    angle: -pi / 4,
-                    child: Icon(Icons.arrow_forward,
-                        color: Colors.white, size: 22.0),
-                  )),
-              _buildMenuItem(
-                  'Deposit',
-                  Transform.rotate(
-                    angle: pi - pi / 4,
-                    child: Icon(Icons.arrow_forward,
-                        color: Colors.white, size: 22.0),
-                  )),
-              _buildMenuItem(
-                'Transaction history',
-                Icon(Icons.receipt, color: Colors.white, size: 22.0),
-              ),
-            ],
+                _buildMenuItem(
+                    'Send',
+                    Transform.rotate(
+                      angle: -pi / 4,
+                      child: Icon(Icons.arrow_forward,
+                          color: Colors.white, size: 22.0),
+                    )),
+                _buildMenuItem(
+                    'Deposit',
+                    Transform.rotate(
+                      angle: pi - pi / 4,
+                      child: Icon(Icons.arrow_forward,
+                          color: Colors.white, size: 22.0),
+                    )),
+                _buildMenuItem(
+                  'Transaction history',
+                  Icon(Icons.receipt, color: Colors.white, size: 22.0),
+                ),
+              ],
+            ),
           ),
-        ),
-        Container(
-          padding: EdgeInsets.all(10.0),
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                "Assets",
-                style: TextStyle(color: Colors.grey, fontSize: 18.0),
-                textAlign: TextAlign.start,
-              ),
-              _buildAssetItem('0.0000076352', 'ETH', '0.00'),
-              _buildAssetItem('625', 'SNT', '14.43'),
-            ],
+          Container(
+            padding: EdgeInsets.all(10.0),
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Assets",
+                  style: TextStyle(color: Colors.grey, fontSize: 18.0),
+                  textAlign: TextAlign.start,
+                ),
+                _buildAssetItem('0.0000076352', 'ETH', '0.00'),
+                _buildAssetItem('625', 'SNT', '14.43'),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
