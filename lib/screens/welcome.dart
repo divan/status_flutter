@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+import '../screens/login.dart';
+import '../screens/restore_account.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -41,7 +43,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()),
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: Text(
@@ -55,7 +62,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RestoreAccountScreen()),
+                    );
+                  },
                   child: Text(
                     "I already have an account",
                     style: TextStyle(
