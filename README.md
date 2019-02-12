@@ -1,16 +1,22 @@
-# status_flutter
+# Status Flutter
 
-A new Flutter project.
+A PoC of Status UI in Flutter.
+
+[![Demo](https://img.youtube.com/vi/6i4ufYIrZmw/0.jpg)](https://www.youtube.com/watch?v=Y6i4ufYIrZmw)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Install Flutter: https://flutter.io/docs/get-started/install
 
-A few resources to get you started if this is your first Flutter project:
+2. Setup emulators or devices (see flutter docs).
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+3. Run
+```
+flutter run
+```
+4. Enjoy.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Licence
+
+MIT
+
